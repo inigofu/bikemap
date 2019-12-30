@@ -1,0 +1,230 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B9D23F37-FCEB-4838-BAF8-C390D36048A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>GpxTracker</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\keyfile.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings2.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="CopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm.Designer.cs">
+      <DependentUpon>CopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceNotifyForm.cs" />
+    <Compile Include="FileSystem.cs" />
+    <Compile Include="FirstStartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstStartDialog.Designer.cs">
+      <DependentUpon>FirstStartDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageCacheDisk.cs" />
+    <Compile Include="ImageCacheMemory.cs" />
+    <Compile Include="ImageCacheWeb.cs" />
+    <Compile Include="ImageProvider.cs" />
+    <Compile Include="IndexChangedEvent.cs" />
+    <Compile Include="LoadingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingDialog.Designer.cs">
+      <DependentUpon>LoadingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapChart.Designer.cs">
+      <DependentUpon>MapChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapDataSource.cs" />
+    <Compile Include="MapView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MapView.Designer.cs">
+      <DependentUpon>MapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewPart.cs" />
+    <Compile Include="MapViewPartDistance.cs" />
+    <Compile Include="MapViewPartMap.cs" />
+    <Compile Include="MapViewPartScale.cs" />
+    <Compile Include="MapViewPartTrack.cs" />
+    <Compile Include="MapViewPartWaypoints.cs" />
+    <Compile Include="MyAnimation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyAnimation.Designer.cs">
+      <DependentUpon>MyAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPoint.cs" />
+    <Compile Include="MyPointF.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Setting.Designer.cs" />
+    <Compile Include="Properties\SettingsExt.cs" />
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsEditDialog.Designer.cs">
+      <DependentUpon>SettingsEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortableBindingList.cs" />
+    <Compile Include="SyncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncForm.Designer.cs">
+      <DependentUpon>SyncForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tile.cs" />
+    <Compile Include="TrackActivity.cs" />
+    <Compile Include="TrackDataManager.cs" />
+    <Compile Include="TrackFileInfo.cs" />
+    <Compile Include="TrackFileProvider.cs" />
+    <Compile Include="TrackFileProviderGpx.cs" />
+    <Compile Include="TrackFileProviderGpx.Native.cs" />
+    <Compile Include="TrackFileProviderKml.cs" />
+    <Compile Include="TrackFileProviderKml.Native.cs" />
+    <Compile Include="TrackFileProviderTcx.cs" />
+    <Compile Include="TrackFileProviderTcx.Native.cs" />
+    <Compile Include="TrackLap.cs" />
+    <Compile Include="TrackPoint.cs" />
+    <Compile Include="TrackWaypoint.cs" />
+    <Compile Include="UnitProvider.cs" />
+    <Compile Include="UnitProviderBasic.cs" />
+    <Compile Include="UnitProviderImperial.cs" />
+    <Compile Include="UnitProviderMetric.cs" />
+    <Compile Include="Units.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CopyForm.resx">
+      <DependentUpon>CopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstStartDialog.resx">
+      <DependentUpon>FirstStartDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingDialog.resx">
+      <DependentUpon>LoadingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.de-DE.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsEditDialog.resx">
+      <DependentUpon>SettingsEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncForm.resx">
+      <DependentUpon>SyncForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\application.ico" />
+    <Content Include="Resources\camera2.bmp" />
+    <Content Include="Resources\climb.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\distance.png" />
+    <Content Include="Resources\flag_icon_blue.png" />
+    <Content Include="Resources\flag_icon_orange.png" />
+    <Content Include="Resources\flag_icon_purple.png" />
+    <Content Include="Resources\flag_icon_red.png" />
+    <Content Include="Resources\flag_icon_white.png" />
+    <Content Include="Resources\gears.png" />
+    <Content Include="Resources\height.png" />
+    <Content Include="Resources\import.ico" />
+    <Content Include="Resources\import.png" />
+    <Content Include="Resources\info_small.png" />
+    <Content Include="Resources\magni_minus_big.png" />
+    <Content Include="Resources\magni_plus_big.png" />
+    <Content Include="Resources\measure.png" />
+    <Content Include="Resources\Network_Internet.png" />
+    <Content Include="Resources\NewCardHS2.PNG" />
+    <Content Include="Resources\ok.png" />
+    <Content Include="Resources\openfolderHS.png" />
+    <Content Include="Resources\regensburg_small.png" />
+    <Content Include="Resources\speed.png" />
+    <Content Include="Resources\time.png" />
+    <Content Include="Resources\TitleSetup.jpg" />
+    <Content Include="UpgradeLog.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\GpxTracker\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
